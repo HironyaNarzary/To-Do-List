@@ -1,0 +1,196 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(62deg, #ff2cdf, #0014ff);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.blur {
+  width: 500px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  min-height: 200px;
+}
+
+#header1 {
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.TaskAddingBar {
+  width: 70%;
+  padding: 0.5rem 0.8rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 20px;
+}
+
+.todo-button {
+  padding: 0.5rem;
+  background-color: #ffae00;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.todo-button:hover {
+  background-color: white;
+  color: #ffae00;
+}
+
+.select {
+  margin-top: 10px;
+}
+
+select {
+  padding: 0.5rem;
+  border-radius: 10px;
+  border: none;
+  background-color: #ffae00;
+  color: white;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.todo-container {
+  margin-top: 20px;
+}
+
+.todo-list {
+  list-style: none;
+  padding: 0;
+}
+
+.todo {
+  background: white;
+  color: black;
+  margin: 10px 0;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 10px;
+}
+
+.todo-item {
+  flex: 1;
+  padding-left: 10px;
+}
+
+.complete-btn, .trash-btn {
+  border: none;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
+}
+
+.complete-btn {
+  background-color: #ffae00;
+  margin-right: 10px;
+}
+
+.trash-btn {
+  background-color: #ff4040;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .blur {
+    width: 90%;
+    padding: 15px;
+  }
+
+  #header1 {
+    font-size: 1.2rem;
+  }
+
+  .TaskAddingBar {
+    width: 65%;
+    font-size: 1rem;
+    padding: 0.4rem 0.7rem;
+  }
+
+  .todo-button, .complete-btn, .trash-btn, select {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .blur {
+    width: 100%;
+    padding: 10px;
+  }
+
+  #header1 {
+    font-size: 1rem;
+  }
+
+  form {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 15px;
+  }
+
+  .TaskAddingBar {
+    width: 100%;
+    font-size: 0.9rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .todo-button {
+    width: 100%;
+    padding: 0.4rem;
+    font-size: 1rem;
+  }
+
+  .todo {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+
+  .todo-item {
+    padding: 0;
+    margin-bottom: 10px;
+    font-size: 0.9rem;
+  }
+
+  .complete-btn, .trash-btn, select {
+    font-size: 0.8rem;
+    padding: 5px 8px;
+  }
+}
